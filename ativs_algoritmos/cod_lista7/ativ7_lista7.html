@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7</title>
+</head>
+<body>
+    <h1>Atividade 7 - Lista de exercícios 7</h1><hr>
+
+    <h4>Informe a marca da TV: </h4>
+    <select id="select_marcaTV">
+        <option>Samsung</option>
+        <option>LG</option>
+        <option>Mondial</option>
+        <option>Britânia</option>
+    </select>
+
+    <h4>Informe o preço da TV: </h4>
+    <input id="input_valorTV">
+
+    <button onclick="Exibirpreço()">Analisar compra</button>
+
+    <div id="div_resultado_preço"></div>
+
+</body>
+</html>
+
+<script>
+    function Exibirpreço() {
+        const marcaTV = select_marcaTV.value; 
+        const preço = Number(input_valorTV.value); 
+
+        if(preço >= 800) {
+            if(marcaTV == 'Mondial' || marcaTV == 'Britânia'){
+                div_resultado_preço.innerHTML=`Na faixa de preço, porém marca não confiável`;
+            }
+        } if(preço <= 2000) {
+                if(marcaTV == 'Mondial' || marcaTV == 'Britânia') {
+                    div_resultado_preço.innerHTML=`Na faixa de preço, porém marca não confiável`;
+                }
+        }
+        if(marcaTV == 'LG' || marcaTV == 'Samsung') {
+            if(preço >= 800 || preço <= 2000) {
+                div_resultado_preço.innerHTML=`Essa TV pode entrar na sua lista!`; 
+            }
+        }
+        if(preço < 800 || preço > 2000) {
+            div_resultado_preço.innerHTML=`TV fora da faixa de preço`; 
+            if(preço < 800) {
+                div_resultado_preço.innerHTML=`Preço baixo demais!`;
+            } if(preço > 2000) {
+                div_resultado_preço.innerHTML=`TV cara demais, infelizmente.`;
+            }
+        }
+    }
+</script>

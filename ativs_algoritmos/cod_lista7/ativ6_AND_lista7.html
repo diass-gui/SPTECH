@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6</title>
+</head>
+<body>
+    <h1>Atividade 6 utilizando && - Lista de exercícios 7</h1><br>
+
+    <h4>Informe a sua nota: </h4>
+    <input id="input_notadoaluno"><br>
+
+    <h4>Informe a frequência do aluno: </h4>
+    <input id="input_frequenciaaluno"> 
+
+    <button onclick="ExibirAprovacao()">Avaliar aluno</button>
+
+</body>
+</html>
+
+<script>
+    function ExibirAprovacao() {
+        const notAluno = Number(input_notadoaluno.value); 
+        const frequencia = Number(input_frequenciaaluno.value); 
+
+        if(notAluno >= 6 && frequencia >= 75) {
+            alert('Parabéns! Aprovado!');
+        } else {
+            alert('Infelizmente, não foi desta vez.'); 
+        }
+    }
+</script>

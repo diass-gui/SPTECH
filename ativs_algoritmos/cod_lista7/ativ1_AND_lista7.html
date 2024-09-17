@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+<body>
+    <h1>Atividade 1 utilizando && - Lista de exercícios 7</h1><hr>
+
+    <h4>Informe a temperatura atual: </h4>
+    <input id="input_temperatura">
+
+    <button onclick="ExibirTemperatura()">Ver situação</button>
+
+</body>
+</html>
+
+<script>
+    function ExibirTemperatura() {
+        const temperatura = Number(input_temperatura.value); 
+
+        if(temperatura >= 21 && temperatura <= 24) {
+            alert('Temperatura confortável'); 
+        } else {
+            alert('Temperatura desconfortável'); 
+        }
+    }
+</script>

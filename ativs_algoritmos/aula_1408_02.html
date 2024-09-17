@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Define o conjunto de caracteres do documento como UTF-8, que é um padrão universal para representar texto -->
+    <meta charset="UTF-8" />
+    
+    <!-- Garante que a página será exibida corretamente em dispositivos móveis, ajustando o layout ao tamanho da tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Define o título da página, que aparecerá na aba do navegador -->
+    <title>Calculadora SPTECH</title>
+  </head>
+  <body>
+    <!-- Cabeçalho principal da página -->
+    <h1>Calculadora SPTECH</h1>
+    
+    <!-- Texto orientando o usuário a inserir o primeiro número -->
+    Entre com o primeiro número:
+    <!-- Campo de entrada de dados. Aqui o usuário vai digitar o primeiro número. O atributo 'id' permite que a gente acesse esse elemento no JavaScript -->
+    <input id="input_n1" />
+    
+    <!-- Texto orientando o usuário a inserir o segundo número -->
+    Entre com o segundo número:
+    <!-- Campo de entrada de dados para o segundo número -->
+    <input id="input_n2" /><br />
+    
+    <!-- Botões para realizar diferentes operações matemáticas. O atributo 'onclick' define a função que será chamada quando o botão for clicado -->
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="multiplicar()">Multiplicar</button>
+    <button onclick="dividir()">Dividir</button>
+  </body>
+</html>
+
+<script>
+  // Função em JavaScript para realizar a soma de dois números
+  function somar() {
+    // A função 'Number()' é utilizada para converter o valor do input, que inicialmente é uma string (texto), para um número
+    var primeiroNumero = Number(input_n1.value);
+    var segundoNumero = Number(input_n2.value);
+
+    // A variável 'soma' armazena o resultado da adição de 'primeiroNumero' e 'segundoNumero'
+    var soma = primeiroNumero + segundoNumero;
+
+    // 'alert()' exibe uma janela de alerta no navegador com o resultado
+    // A crase (`) permite a utilização da interpolação de strings, onde variáveis são inseridas diretamente no texto com `${}`
+    alert(
+      `O resultado da soma entre ${primeiroNumero} e ${segundoNumero} é: ${soma}`
+    );
+  }
+
+  // Função para realizar a subtração de dois números
+  function subtrair() {
+    // Assim como na função 'somar', 'Number()' é usado para converter os valores dos inputs em números
+    var primeiroNumero = Number(input_n1.value);
+    var segundoNumero = Number(input_n2.value);
+
+    // A variável 'subtracao' armazena o resultado da subtração de 'segundoNumero' de 'primeiroNumero'
+    var subtracao = primeiroNumero - segundoNumero;
+
+    // Exibe o resultado da subtração usando um alerta
+    alert(
+      `O resultado da subtração entre ${primeiroNumero} e ${segundoNumero} é: ${subtracao}`
+    );
+  }
+
+  // Função para realizar a divisão de dois números
+  function dividir() {
+    // Converte os valores dos inputs em números
+    var primeiroNumero = Number(input_n1.value);
+    var segundoNumero = Number(input_n2.value);
+
+    // A variável 'divisao' armazena o resultado da divisão de 'primeiroNumero' por 'segundoNumero'
+    var divisao = primeiroNumero / segundoNumero;
+
+    // Exibe o resultado da divisão usando um alerta
+    alert(
+      `O resultado da divisão entre ${primeiroNumero} e ${segundoNumero} é: ${divisao}`
+    );
+  }
+
+  // Função para realizar a multiplicação de dois números
+  function multiplicar() {
+    // Converte os valores dos inputs em números
+    var primeiroNumero = Number(input_n1.value);
+    var segundoNumero = Number(input_n2.value);
+
+    // A variável 'multiplicacao' armazena o resultado da multiplicação de 'primeiroNumero' por 'segundoNumero'
+    var multiplicacao = primeiroNumero * segundoNumero;
+
+    // Exibe o resultado da multiplicação usando um alerta
+    alert(
+      `O produto da multiplicação entre ${primeiroNumero} e ${segundoNumero} é: ${multiplicacao}`
+    );
+  }
+</script>

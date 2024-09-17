@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7</title>
+</head>
+<body>
+    <h1>Atividade 7 - Lista de exercícios 5</h1><hr>
+
+    <!-- Combustível -->
+    <h4>Informe a quantidade de combustível consumido: </h4>
+    <input id="input_qtdCombustivel_consu">
+
+    <!-- Distância -->
+    <h4>Informe a distância percorrida: </h4>
+    <input id="input_distancia_percorrida">
+
+    <!-- Botão/Chamar função -->
+    <button onclick="ExibirCalculoDistancia()">Calcular Consumo</button>
+
+    <div id="div_resultado_distancia"></div>
+
+</body>
+</html>
+
+<!-- Funcionamento -->
+<script>
+    function ExibirCalculoDistancia() {
+        // variáveis 
+        var qtdCombustivel = Number(input_qtdCombustivel_consu.value); 
+        var distanciaPercorrida = Number(input_distancia_percorrida.value) ; 
+
+        // cálculos
+        var mediaKM = distanciaPercorrida / qtdCombustivel ; 
+
+        // condição
+        if(mediaKM > 12 ) {
+            div_resultado_distancia.innerHTML=`Seu consumo foi de ${mediaKM}l/km. Ótimo consumo, carro econômico!`;
+        }
+        else {
+            div_resultado_distancia.innerHTML=`Seu consumo foi de ${mediaKM}l/km. Consumo elevado. Verificar motor.` ; 
+        }
+    }
+</script>

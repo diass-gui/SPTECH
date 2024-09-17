@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade 1</title>
+</head>
+<body>
+    <h1>Atividade 1 - Lista de exercícios 7</h1><hr>
+
+    <h4>Informe sua nota do ENEM: </h4>
+    <input id="input_notaenem1">
+
+    <h4>Informe a sua nota do vestibular interno: </h4>
+    <input id="input_notavestibularinterno">
+
+    <button onclick="ExibirAvaliacao()">Avaliação</button>
+
+</body>
+</html>
+
+<script>
+    function ExibirAvaliacao() {
+
+        const notaENEM = Number(input_notaenem1.value);
+        const notaInterno = Number(input_notavestibularinterno.value);
+
+        if(notaENEM >= 800 || notaInterno >= 700) {
+            alert('Parabéns! Aprovado!') ;
+        } else {
+            alert('Tente semestre que vem');
+        }
+    }
+</script>

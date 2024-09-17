@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    <h1>Atividade 2 - Lista de exercícios 7</h1><hr>
+
+    <h4>Informe a sua renda individual: </h4>
+    <input id="input_rendaindividual">
+
+    <h4>Informe a sua renda familiar: </h4>
+    <input id="input_rendafamiliar">
+
+    <button onclick="VerificarBeneficio()">Terei o benefício?</button>
+
+    <div id="div_resultado_beneficio"></div>
+
+</body>
+</html>
+
+<script>
+    function VerificarBeneficio() { 
+
+        const rendaIndividual = Number(input_rendaindividual.value);
+        const rendaFamiliar = Number(input_rendafamiliar.value);
+
+        if(rendaIndividual <= 2000 || rendaFamiliar <= 3000) {
+            div_resultado_beneficio.innerHTML=`Você terá direito ao auxílio!`;
+        } else {
+            div_resultado_beneficio.innerHTML=`Sem direito ao auxílio.`;
+        }
+    }
+</script>

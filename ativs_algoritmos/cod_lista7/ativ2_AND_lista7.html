@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    <h1>Atiidade 2 utilizando && - Lista de exercícios 7</h1><hr>
+
+    <h4>Informe a sua renda individual: </h4>
+    <input id="input_rendaindividual"> 
+
+    <h4>Informe a sua renda familiar total: </h4>
+    <input id="input_rendafamiliartotal"> 
+
+    <button onclick="ExibirResultado()">Verificar ajuda</button>
+
+</body>
+</html>
+
+<script>
+    function ExibirResultado() {
+        const rendaIndividual = Number(input_rendaindividual.value);
+        const rendaFamiliar = Number(input_rendafamiliartotal.value); 
+
+        if(rendaIndividual <= 1050 && rendaFamiliar <= 2100) {
+            alert('Você terá direito'); 
+        } else {
+            alert('Você não terá direito');
+        }
+    }
+</script>

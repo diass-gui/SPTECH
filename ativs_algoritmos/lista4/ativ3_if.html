@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+    <h1>Atividade 3 - Lista de exercícios 4 </h1> <hr>
+
+    <!-- Solicitar notas -->
+    <h4>Informe a sua 1°nota: </h4>
+    <input id="input_primeira_nota">
+
+    <h4>Informe sua 2°nota: </h4>
+    <input id="input_segunda_nota">
+
+    <h4>Informe sua 3°nota: </h4>
+    <input id="input_terceira_nota"> 
+
+    <!-- Botão/Chamar função -->
+    <button onclick="CalcularMediaAluno()"> Analisar desempenho </button>
+
+</body>
+</html>
+
+<!-- Funcionamento -->
+<script>
+    function CalcularMediaAluno() {
+
+        // variáveis
+        var primeiraNota = Number(input_primeira_nota.value);
+        var segundaNota = Number(input_segunda_nota.value);
+        var terceiraNota = Number(input_terceira_nota.value); 
+
+        // cálculos
+        var somaNotas = primeiraNota + segundaNota + terceiraNota ; 
+        var médiaAluno = somaNotas / 3 ; 
+
+        // Resultado
+        alert(`Sua média foi de ${médiaAluno}`) ; 
+
+        // condição
+        if(médiaAluno >= 9.4) {
+            alert(`Parabéns, você é fora de série!`) ; 
+        }
+    }
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 8</title>
+</head>
+<body>
+    <h1>Atividade 8 - Lista de exercícios 5</h1> <hr>
+
+    <!-- Valor Produto -->
+    <h4>Informe o valor do produto: </h4>
+    <input id="input_valor_produto">
+
+    <!-- Quantidade Produto -->
+    <h4>Informe a quantidade que será comprada: </h4>
+    <input id="input_qtd_comprada">
+
+    <!-- Botão/Chamar função -->
+    <button onclick="ExibirCalcularProduto()">Calcular Total</button>
+
+    <div id="div_resultado_produto"></div>
+
+</body>
+</html>
+
+<!-- Funcionamento -->
+<script>
+    function ExibirCalcularProduto() {
+        // variáveis 
+        const valorProduto = Number(input_valor_produto.value); 
+        const qtdComprada = Number(input_qtd_comprada.value) ; 
+
+        // cálculos
+        var totalCompra = valorProduto * qtdComprada ; 
+
+        // condição
+        if(totalCompra > 100) {
+            div_resultado_produto.innerHTML=`Compra aprovada, valor total é de R$${totalCompra}.`;
+        }
+        else {
+            div_resultado_produto.innerHTML=`Valor mínimo para compra é R$100,00, adicione mais produtos!` ; 
+        }
+    }
+</script>

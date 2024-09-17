@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7</title>
+</head>
+<body>
+    <h1>Atividade 7 utilizando && - Lista de exercícios 7</h1><hr>
+
+    <h4>Informe o seu login: </h4>
+    <input id="input_loginUsuario"> 
+
+    <h4>Informe a sua senha: </h4>
+    <input type="password" id="input_senhaUsuario">
+
+    <button onclick="ExibirLogin()">Entrar</button>
+
+    <button onclick="VerSenha()">Ver senha</button>
+
+    <div id="div_senha"></div>
+
+</body>
+</html>
+
+<script>
+    function ExibirLogin() {
+        const login = input_loginUsuario.value;
+        const senha = input_senhaUsuario.value; 
+
+        if(login == 'SPTech' && senha == 'digital'){
+            alert('Usuário autenticado com sucesso!'); 
+        } else {
+            alert('Falha na autenticação'); 
+        }
+    }
+    function VerSenha() {
+        const senha = input_senhaUsuario.value; 
+
+        div_senha.innerHTML=`A senha é: ${senha}`;
+    }
+</script>

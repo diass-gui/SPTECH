@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4 </title>
+</head>
+<body>
+    <h1>Atividade 4 <br> <hr> 
+
+    Informe o sabor da pizza: 
+    <input id="input_sabor_pizza"> <br> 
+    Informe o valor da pizza: 
+    <input id="input_valor_pizza"> <br>
+    Informe a quantidade de amigos que vão comer, incluindo você: 
+    <input id="input_qtdAmigosPizza"> 
+
+    <button onclick="ExibirCalculaPizza()"> Ver valor por amigo </button>
+
+    <div id="div_resultado_pizza"> </div>
+</body>
+</html>
+
+<!-- Funcionamento -->
+<script> 
+    function ExibirCalculaPizza() {
+        // variáveis
+        var PrecoPizza = Number(
+            input_valor_pizza.value
+        ); 
+        var SaborPizza = input_sabor_pizza.value ;
+        var qtdAmigos = Number(
+            input_qtdAmigosPizza.value
+        ); 
+
+        // calculos
+        var caixinha = PrecoPizza / 10 ; 
+        var valorTotalPizza = PrecoPizza + caixinha ;
+        var divisao_amigos = valorTotalPizza / qtdAmigos ; 
+
+        //Exibir
+        div_resultado_pizza.innerHTML = `Cada amigo vai colaborar com R$${divisao_amigos} 
+        para comprar a pizza sabor ${SaborPizza}` 
+        
+        
+    }
+</script>

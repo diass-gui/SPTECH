@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6 </title>
+</head>
+<body>
+    Informe o ki-base do seu guerreiro sayajin:
+    <input id="input_kibase_sayajin"><br>
+    Transformar em: 
+    <button onclick="TipoSSJ1()">SSJ</button>
+    <button onclick="TipoSSJ2()">SSJ2</button>
+    <button onclick="TipoSSJ3()">SSJ3</button>
+
+    <div id="div_resultado_ssj"></div>
+
+</body>
+</html>
+<!-- Funcionamento -->
+
+<script>
+    function TipoSSJ1() {
+        // variáveis
+        var kibase_ssj = Number(
+            input_kibase_sayajin.value
+        );
+        var nomeSSJ = 'Super Sayajin (SSJ)' ;
+
+        // calculos
+        var kibase_finalSSJ = kibase_ssj * 50 ; 
+
+        // exibição
+        div_resultado_ssj.innerHTML=`Após se transformar em ${nomeSSJ}, o ki 
+        desse Sayajin passa a ser de ${kibase_finalSSJ}.` ; 
+    }
+    function TipoSSJ2() {
+         // variáveis
+         var kibase_ssj2 = Number(
+            input_kibase_sayajin.value
+        );
+        var nomeSSJ2 =  'Super Sayajin 2 (SSJ2)' ;
+
+        // calculos
+        var kibase_finalSSJ2 = kibase_ssj2 * 100 ; 
+
+        // exibição
+        div_resultado_ssj.innerHTML=`Após se transformar em ${nomeSSJ2}, o ki 
+        desse Sayajin passa a ser de ${kibase_finalSSJ2}.` ; 
+    }
+    function TipoSSJ3() {
+         // variáveis
+         var kibase_ssj3 = Number(
+            input_kibase_sayajin.value
+        );
+        var nomeSSJ3 =  'Super Sayajin (SSJ)' ;
+
+        // calculos
+        var kibase_finalSSJ3 = kibase_ssj3 * 200 ; 
+
+        // exibição
+        div_resultado_ssj.innerHTML=`Após se transformar em ${nomeSSJ3}, o ki 
+        desse Sayajin passa a ser de ${kibase_finalSSJ3}.` ; 
+    }
+</script>

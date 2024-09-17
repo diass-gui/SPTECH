@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 11</title>
+</head>
+<body>
+    <h1>Cartão Fidelidade - Metrô SP</h1><hr>
+
+    <h4>Informe a quantidade de passagens que deseja comprar: </h4>
+    <input id="input_quantidadepassagem">
+
+    <button onclick="CartaoFidelidade()">Comprar</button>
+
+    <div id="div_resultado_cartao"></div>
+
+</body>
+</html>
+
+<script>
+    function CartaoFidelidade() {
+        const qtdPassagem = Number(input_quantidadepassagem.value);
+        const valorPassagem = 4.40;
+
+        var precoFinal = qtdPassagem * valorPassagem ; 
+
+        if(qtdPassagem >= 8 && qtdPassagem <= 19) {
+            var desconto = precoFinal * 0.03; 
+            var precoTotal = precoFinal - desconto; 
+            div_resultado_cartao.innerHTML=`Total a pagar: ${precoTotal}`;
+        }
+        if(qtdPassagem >= 20 && qtdPassagem <= 49) {
+            var desconto = precoFinal * 0.05; 
+            var precoTotal = precoFinal - desconto ; 
+            div_resultado_cartao.innerHTML=`Total a pagar: ${precoTotal}`;
+        }
+        if(qtdPassagem == 50) {
+            var desconto = precoFinal * 0.07; 
+            var precoTotal = precoFinal - desconto ; 
+            div_resultado_cartao.innerHTML=`Total a pagar: ${precoTotal}`;
+        } 
+        else {
+            alert('Quantidade inválida para o Fidelidade!');
+        }
+        
+        /*if(qtdPassagem < 8 || qtdPassagem > 50) {
+            alert('Quantidade inválida para o Fidelidade!'); 
+        } */
+    }
+</script>

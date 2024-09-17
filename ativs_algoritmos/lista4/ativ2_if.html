@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2 </title>
+</head>
+<body>
+    <h1>Atividade 2 - LISTA DE EXERCÍCIOS 4</h1><hr>
+    Informe a quantidade de latinhas que você bebe por dia:
+    <input id="input_qtdlatinhas_dia">
+    <button onclick="ExibirCalculoRefri()">Quantos refris?</button>
+    <div id="div_resultado_dia"></div>
+</body>
+</html>
+
+<!-- Funcionamento -->
+
+<script>
+    function ExibirCalculoRefri() {
+        // variáveise
+        var qtdLatasDia = Number(input_qtdlatinhas_dia.value);
+        // cálculos 
+        var LatasAno = qtdLatasDia * 365 ; 
+        // condição
+        if(LatasAno < 500) {
+            div_resultado_dia.innerHTML=`Em um ano, você consumiu ${LatasAno} latinhas.` ;
+        }
+        if(LatasAno >= 500) {
+            div_resultado_dia.innerHTML=`Em um ano, você consumiu ${LatasAno} latinhas. Cuidado com a diabetes!` ;
+        }
+    }
+</script>

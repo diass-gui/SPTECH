@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+</head>
+<body>
+    <h1>Atividade 4 utilizando && - Lista de exercícios 7</h1><hr>
+
+    <h4>Informe a hora do dia que você costuma acessar a Netflix: </h4><br>
+    <input id="input_horaacesso">
+
+    <button onclick="ExibirHoraNetflix()">Ver recomendação</button>
+
+    <div id="div_resultado_acesso"></div>
+
+</body>
+</html>
+
+<script>
+    function ExibirHoraNetflix() {
+        const horaAcesso = Number(input_horaacesso.value); 
+        
+        if(horaAcesso >= 19 && horaAcesso <= 21) {
+            div_resultado_acesso.innerHTML=`Não é recomendável que você assista sua série favorita no horário ${horaAcesso}h`;
+        } else {
+            div_resultado_acesso.innerHTML=`O horário ${horaAcesso}h é adequado para assistir sua série favorita!`;
+        }
+    }
+</script>

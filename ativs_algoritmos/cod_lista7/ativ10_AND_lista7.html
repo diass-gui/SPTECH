@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 10</title>
+</head>
+<body>
+    <h1>Atividade 10 utilizando && - Lista de exercícios 7</h1><hr>
+
+    <h4>Informe a sua idade e o seu salário: </h4>
+    <input placeholder="Sua idade" id="input_idadeUsuario"><br>
+    <input placeholder="Seu salário" id="input_salarioUsuario">
+
+    <button onclick="ExibirVida()">Analisar situação</button>
+
+    <div id="div_resultado_vida"></div>
+
+</body>
+</html>
+
+<script>
+    function ExibirVida() {
+        const idadeUsuario = Number(input_idadeUsuario.value);
+        const salarioUsuario = Number(input_salarioUsuario.value);
+
+        if(idadeUsuario < 18 && salarioUsuario <= 2500) {
+            div_resultado_vida.innerHTML=`Menor de idade e liso.`;
+        }
+        if(idadeUsuario < 18 && salarioUsuario >= 2500) {
+            div_resultado_vida.innerHTML=`Menor de idade e ostentação.`
+        } 
+        if(idadeUsuario >= 18 && salarioUsuario <= 3500) {
+            div_resultado_vida.innerHTML=`Maior de idade e liso.`;
+        }
+        if(idadeUsuario >= 18 && salarioUsuario >= 3500 && salarioUsuario <= 7000) {
+            div_resultado_vida.innerHTML='Maior de idade e ostentação.';
+        } else if(idadeUsuario >= 18 && salarioUsuario > 7000) {
+            div_resultado_vida.innerHTML=`Maior de idade e jovem milionário.`;
+        }
+    }
+</script>

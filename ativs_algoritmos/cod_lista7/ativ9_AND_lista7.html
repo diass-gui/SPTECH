@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9</title>
+</head>
+<body>
+    <h1>Atividade 9 utilizando && - Lista de exercícios 7</h1><hr>
+    
+    <h4>Informe a altura mínima permitida dos candidatos: </h4>
+    <input id="input_alturaminima">
+
+    <h4>Informe a altura máxima permitida dos candidatos: </h4>
+    <input id="input_alturamaxima">
+
+    <h4>Informe o seu nome: </h4>
+    <input id="input_nomecandidato">
+
+    <h4>Informe a sua altura: </h4>
+    <input id="input_alturacandidato"> 
+
+    <button onclick="ExibirPiloto()">Verificar situação</button>
+
+    <div id="div_resultado_piloto"></div>
+
+</body>
+</html>
+
+<script>
+    function ExibirPiloto() {
+        const alturaMinima = Number(input_alturaminima.value) / 100;
+        console.log(alturaMinima);
+        const alturaMaxima = Number(input_alturamaxima.value) / 100;
+        console.log(alturaMaxima); 
+        const nomeCandidato = input_nomecandidato.value; 
+        console.log(nomeCandidato);
+        const alturaCandidato = Number(input_alturacandidato.value) / 100;
+        console.log(alturaCandidato);
+
+        if(alturaCandidato >= alturaMinima && alturaCandidato <= alturaMaxima) {
+            div_resultado_piloto.innerHTML +=`O candidato ${nomeCandidato} com altura de ${alturaCandidato}
+            participará do processo de seleção de pilotos.<br>`;
+        } else {
+            div_resultado_piloto.innerHTML +=`Infelizmente o candidato ${nomeCandidato} com altura de ${alturaCandidato} 
+            não atende os requisitos.<br>`;
+        }
+    }
+</script>

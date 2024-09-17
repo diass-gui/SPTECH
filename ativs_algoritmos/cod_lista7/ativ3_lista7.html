@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+    <h1>Atividade 3 - Lista de exercícios 7</h1><hr>
+
+    <h4>Informe o modo de pagamento: </h4>
+    <ul>
+        <li>Dinheiro</li>
+        <li>Cartão de Débito</li>
+        <li>Cartão de Crédito</li>
+        <li>Boleto</li>
+    </ul>
+    <input id="input_mododepagamento">
+
+    <button onclick="ExibirParcelamento()">Analisar Compra</button>
+
+    <div id="div_resultado_parcelamento"></div>
+
+</body>
+</html>
+
+<script>
+    function ExibirParcelamento() {
+
+        const modoPagamento = input_mododepagamento.value;
+
+        if(modoPagamento == "Dinheiro" || modoPagamento == "Cartão de Débito") {
+            div_resultado_parcelamento.innerHTML=`Você terá que pagar à vista.`;
+        } else if (modoPagamento == "Cartão de Crédito" || modoPagamento == "Boleto") {
+            div_resultado_parcelamento.innerHTML=`Pagamento poderá ser parcelado.`;
+        }
+    }
+</script>

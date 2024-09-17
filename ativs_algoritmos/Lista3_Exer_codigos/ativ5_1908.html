@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5</title>
+</head>
+<body>
+    <h1> Atividade 5 </h1> <br> <hr> 
+    Informe o valor da passagem de ônibus:
+    <input id="input_valor_passagem"><br>
+    Informe a quantidade de viagens por mês: 
+    <input id="input_qtd_viagem"><br>
+    Informe a distância do seu trabalho para a sua casa: 
+    <input id="input_distancia_user"><br>
+    <button onclick="ExibirCalculaVT()"> Calcular VT </button>
+    <div id="div_resultado_vt"></div>
+</body>
+</html>
+
+<script> 
+    function ExibirCalculaVT() {
+        // variáveis
+        var valorPassagem = Number(
+            input_valor_passagem.value
+        ) ; 
+        var qtdViagens = Number(
+            input_qtd_viagem.value
+        ); 
+        var distanciaViagem = Number(
+            input_distancia_user.value
+        ); 
+        // calculos
+        var distanciaReal = distanciaViagem * 1000 ; 
+        var gastoPassagem = valorPassagem * qtdViagens ; 
+        var gastoCarroApp = distanciaReal * 2/3 ;
+        var porcentagemApp = qtdViagens / 10 ;
+        var totalApp = porcentagemApp * gastoCarroApp ; 
+
+        var gastoTotal = gastoPassagem + totalApp ;
+
+        div_resultado_vt.innerHTML=`Você vai gastar R$${gastoTotal} por mês com transporte.`;
+
+    }
+</script>
