@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade na Sala </title>
+</head>
+<body>
+    <h1>Atividade na sala - Aula 16.09  </h1><br>
+
+    <!--<h4>Informe um número: </h4>
+    <input id="input_numero"><!-->
+
+    <button onclick="ExibirNumero()">Contar</button>
+
+    <div id="div_numeros"></div>
+</body>
+</html>
+
+<script>
+    function ExibirNumero() {
+
+        for(var numero = 0; numero <= 15;numero += 1) {
+            div_numeros.innerHTML +=`${numero} <br>`;
+
+        }
+    }
+</script>

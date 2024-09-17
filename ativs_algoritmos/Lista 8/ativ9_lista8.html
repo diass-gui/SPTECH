@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Atividade 9 - Lista de exercícios 8</h1><hr>
+
+    <h4>Informe um número: </h4>
+    <input id="input_numeros">
+
+    <h4>Informe uma frase: </h4>
+    <input id="input_frase"> 
+
+    <button onclick="ExibirPapagaio()">Papagaio</button>
+
+</body>
+</html>
+
+<script>
+    function ExibirPapagaio() {
+        const papagaio = Number(input_numeros.value); 
+        const frase = input_frase.value; 
+
+        for(var numero = 1; numero <= papagaio; numero += 1) {
+            alert(`${numero}. ${frase}`);
+        }
+    }
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Atividade 6 - Lista de exercícios 8</h1><hr>
+
+    <h4>Informe a pessoa que você mais ama no mundo: </h4>
+    <input id="input_amor">
+
+    <h4>Informe o quanto você ama: </h4>
+    <input id="input_quantidade">
+
+    <button onclick="ExibirAmor()">Expressar amor</button>
+
+    <div id="div_amor"></div>
+
+</body>
+</html>
+
+<script>
+    function ExibirAmor() {
+        const nome = input_amor.value;
+        const qtdAmor = Number(input_quantidade.value);
+
+        for(var amor = 1; amor == qtdAmor; amor += 1) {
+            div_amor.innerHTML+=`${amor}. ${nome}, eu te amo! Sempre lembre disso! <br>`;
+        }
+    }
+</script>

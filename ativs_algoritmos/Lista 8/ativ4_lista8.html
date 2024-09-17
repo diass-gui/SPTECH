@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+</head>
+<body>
+    <h1>Atividade 4 - Lista de exercícios 8</h1><hr>
+
+    <button onclick="ExibirPares()">52 pares</button>
+
+    <div id="div_pares"></div>
+
+</body>
+</html>
+
+<script>
+    function ExibirPares() {
+        for(var pares = 0; pares <= 100; pares += 2) {
+            div_pares.innerHTML+=`${pares} <br>`;
+        }
+    }
+</script>

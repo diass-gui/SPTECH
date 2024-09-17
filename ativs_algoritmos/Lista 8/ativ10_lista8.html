@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Atividade 10 - Lista de exercícios 8</h1><hr>
+
+    <h4>Informe um valor mínimo para o intervalo: </h4>
+    <input id="input_minimo">
+
+    <h4>Informe um valor máximo para o intervalo: </h4>
+    <input id="input_maximo">
+
+    <button onclick="IntervaloPares()">52 Pares</button>
+
+    <div id="div_pares"></div>
+
+</body>
+</html>
+
+<script>
+    function IntervaloPares () {
+        const minimo = Number(input_minimo.value); 
+        const maximo = Number(input_maximo.value);
+
+        for(var numero = minimo; numero <= maximo; numero += 2) {
+            div_pares.innerHTML+=`${numero} <br>`;
+        }
+    }
+</script>
