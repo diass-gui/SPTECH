@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+<body>
+    <!-- Entrada/Solicitação de dados -->
+    Informe quantas horas de sono que você dorme normalmente:
+    <input id="input_horasdesono_usuario"> 
+    <button onclick="fasesSonoUsuario()"> 
+        Calcular Sono
+    </button><br>
+    <div id="div_resultado_sonos"> </div>
+</body>
+</html>
+
+<!-- Funcionamento -->
+
+<script>
+    function fasesSonoUsuario() {
+
+        // declarando as variáveis
+        var qtdHorasdeSono = Number(
+            input_horasdesono_usuario.value
+        ) ; 
+        var fase1 = 100/5 ; 
+        var fase2 = 100/45 ; 
+        var fase3 = 100/30 ; 
+        var faseREM = 100/20 ; 
+
+        // cálculos
+        var fase1User = qtdHorasdeSono / fase1 ; 
+        var fase2User = qtdHorasdeSono / fase2 ; 
+        var fase3User = qtdHorasdeSono / fase3 ; 
+        var faseREMUser = qtdHorasdeSono / faseREM ; 
+
+        // Exibindo os resultados 
+        //alert(`Ao dormir ${qtdHorasdeSono}, você dormiu: 
+        //${fase1User} horas na fase 1, 
+        //${fase2User} horas na fase 2, 
+        //${fase3User} horas na fase 3, 
+        //${faseREMUser} horas na fase REM`) ; 
+
+        div_resultado_sonos.innerHTML = (`Ao dormir ${qtdHorasdeSono}, você dormiu: 
+        ${fase1User} horas na fase 1, 
+        ${fase2User} horas na fase 2, 
+        ${fase3User} horas na fase 3, 
+        ${faseREMUser} horas na fase REM`) ; 
+    }
+</script>

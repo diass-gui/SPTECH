@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio colisão</title>
+</head>
+<body>
+    <h1>Desafio: Colisão entre retângulos</h1><hr>
+
+    <h4>Informe o valor dos vértices do retângulo 1: </h4>
+    <input type="number" id="input_x0R1"><br>
+    <input type="number" id="input_x1R1"><br>
+    <input type="number" id="input_y0R1"><br>
+    <input type="number" id="input_y1R1"><br>
+
+    <h4>Informe o valor dos vértices do retângulo 2: </h4>
+    <input type="number" id="input_x0R2"><br>
+    <input type="number" id="input_x1R2"><br>
+    <input type="number" id="input_y0R2"><br>
+    <input type="number" id="input_y1R2"><br>
+
+    <button onclick="CalcularColisao()">Verficar colisão</button>
+
+    <div id="div_resultado_colisão"></div>
+
+</body>
+</html>
+
+<script>
+    function CalcularColisao() {
+
+        // Retângulo 1
+        const x0R1 = Number(input_x0R1.value);
+        const x1R1 = Number(input_x1R1.value);
+        const y0R1 = Number(input_y0R1.value);
+        const y1R1 = Number(input_y1R1.value);
+
+        // Retângulo 2
+        const x0R2 = Number(input_x0R2.value);
+        const x1R2 = Number(input_x1R2.value);
+        const y0R2 = Number(input_y0R2.value);
+        const y1R2 = Number(input_y1R2.value);
+
+        if(y1R2 >= y1R1) {
+           if(x1R2 >= x1R1) {
+            div_resultado_colisão.innerHTML=`Eles colidem`; 
+           }
+        } else if(x0R2 > x0R1) {
+            if(x1R2 > x1R1) {
+                div_resultado_colisão.innerHTML=`Eles não colidem`;
+            }
+        }
+        
+        /*else if(y0R1 = y0R2) {
+            if(y1R1 == y1R2) {
+                div_resultado_colisão.innerHTML=`Eles colidem`;
+            }
+        }
+        */ 
+
+
+        //const valoresR1 = x0R1 + x1R1 + y0R1 + y1R1 ; 
+        //console.log(valoresR1);
+
+        //const regraVerticex = x0R1 < x1R1;
+        //const regraVerticey = y0R1 < y1R1;
+
+        //const regraVerticexR2 = x0R2 < x1R2;
+        //const regraVerticeyR2 = y0R2 < y1R2;
+
+        //console.log(regraVerticey); 
+        //console.log(regraVerticex); 
+        //console.log(regraVerticexR2);
+        //console.log(regraVerticeyR2);
+
+        /*
+        if(x0R1 == x0R2) {
+            if(y0R1 == y0R2) {
+                if(x1R1 == x1R2) {
+                    if(y1R1 == y1R2) {
+                        div_resultado_colisão.innerHTML=`Eles colidem.`;
+                    }
+                }
+            } 
+        } 
+        //else if(x1R1 == x1R2) {
+            //if(y1R1 == y1R2) {
+              //  div_resultado_colisão.innerHTML=`Eles colidem.`;
+            //}
+        //} 
+        else if(x0R1 != x0R2){
+            if(x1R1 == x1R2) {
+                if(y0R1 == y0R2) {
+                    if(y1R1 == y1R2) {
+                        div_resultado_colisão.innerHTML=`Eles colidem.`;
+                    }
+                }
+            }
+        }
+        // else if(x1R1 != x1R2){
+            //if(y1R1 == y1R2) {
+              //  div_resultado_colisão.innerHTML=`Eles colidem.`;
+            //}
+        //}
+        else if(x0R1 == x0R2) {
+            if(x1R1 != x1R2) {
+                if(y0R1 == y0R2) {
+                    if(y1R1 == y1R2) {
+                        div_resultado_colisão.innerHTML=`Eles colidem.`;
+                    
+                    }
+                }
+            }    
+        }  
+        else if(x0R1 == x0R2) {
+            if(x1R1 == x1R2) {
+                if(y0R1 != y0R2) {
+                    if(y1R1 == y1R2) {
+                        div_resultado_colisão.innerHTML=`Eles colidem.`;
+                    
+                    }
+                }
+            }    
+        }    
+        else if(x0R1 == x0R2) {
+            if(x1R1 == x1R2) {
+                if(y0R1 == y0R2) {
+                    if(y1R1 != y1R2) {
+                        div_resultado_colisão.innerHTML=`Eles colidem.`;
+                    
+                    }
+                }
+            }    
+        }     
+        else if(x0R1 != x0R2) {
+            if(x1R1 != x1R2) {
+                if(y0R1 == y0R2) {
+                    if(y1R1 == y1R2) {
+                        div_resultado_colisão.innerHTML=`Eles colidem.`;
+                    
+                    }
+                }
+            }    
+        } 
+        else if(x0R1 == x0R2) {
+            if(x1R1 != x1R2) {
+                if(y0R1 != y0R2) {
+                    if(y1R1 == y1R2) {
+                        div_resultado_colisão.innerHTML=`Eles colidem.`;
+                    
+                    }
+                }
+            }    
+        } 
+        else if(x0R1 == x0R2) {
+            if(x1R1 == x1R2) {
+                if(y0R1 != y0R2) {
+                    if(y1R1 != y1R2) {
+                        div_resultado_colisão.innerHTML=`Eles colidem.`;
+                    
+                    }
+                }
+            }    
+        } 
+        else if (x0R1 != x0R2){
+            if(y0R1 != y0R2){
+                if(x1R1 != x1R2){
+                    if(y1R1 != y1R2) {
+                        div_resultado_colisão.innerHTML=`Eles não colidem.`;
+                    }
+                }
+                
+            }
+        }
+    
+        */
+        //else if(x1R1 != x1R2) {
+          //  if(y1R1 != y1R2) {
+            //    div_resultado_colisão.innerHTML=`Eles não colidem.`;
+            //}
+        //}
+
+        //else if (x0R1 != x0R2){
+          //  if(y0R1 != y0R2){
+            //    div_resultado_colisão.innerHTML=`Eles não colidem.`;
+            //}
+        //}
+        //else if(x1R1 != x1R2) {
+          //  if(y1R1 != y1R2) {
+            //    div_resultado_colisão.innerHTML=`Eles não colidem.`;
+            //}
+        //}
+        
+
+        //else {
+            //div_resultado_colisão.innerHTML=`Eles não colidem.`;
+        //}
+    }
+</script>

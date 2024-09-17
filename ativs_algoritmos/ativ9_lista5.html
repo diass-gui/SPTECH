@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9</title>
+</head>
+<body>
+    <h1>Atividade 9 - Lista de exercícios 5</h1>
+
+    <!-- Valor do empréstimo -->
+    <h4>Informe o valor do empréstimo: </h4>
+    <input id="input_valor_emprestimo">
+
+    <!-- Quantidade parcelas -->
+    <h4>Informe a quantidade de parcelas: </h4>
+    <input id="input_quanti_parcelas"> 
+
+    <!-- Botão/Chamar função -->
+    <button onclick="ExibirCalcularJuros()">Calcular Juros</button>
+
+    <div id="div_resultado_juros"></div>
+
+</body>
+</html>
+
+<!-- Funcionamento -->
+<script>
+    function ExibirCalcularJuros() {
+        // variáveis 
+        var valorEmp = Number(input_valor_emprestimo.value);
+        var qtdParcelas = Number(input_quanti_parcelas); 
+
+        // cálculos 
+        var jurosTotal = valorEmp + (valorEmp * 1.02 * qtdParcelas) ; 
+
+        if(jurosTotal <= 50.000 ) {
+            div_resultado_juros.innerHTML=`Valor total a pagar em ${qtdParcelas} meses é de R$${jurosTotal}`;
+        }
+        else {
+            div_resultado_juros.innerHTML=`Empréstimo de alto valor, consulte o gerente!`;
+        }
+    }
+</script>

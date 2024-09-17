@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+    <h1> Atividade 3 </h1><hr><br>
+
+    Informe um número para a tabuada: 
+    <input id="input_numTabuada_user"><br>
+    <button onclick="ExibirCalculoTabuada()"> Ver tabuada </button>
+    <div id="div_resultado_tabuada"></div>
+</body>
+</html>
+
+<!-- Funcionamento -->
+
+<script>
+    function ExibirCalculoTabuada() {
+        // variáveis
+        var numeroTabuadaUsuario = Number(
+            input_numTabuada_user.value
+        ) ; 
+
+        // calculos
+        var vezes2_tabuada = numeroTabuadaUsuario + numeroTabuadaUsuario ;
+        var vezes3_tabuada = vezes2_tabuada + numeroTabuadaUsuario ;
+        var vezes4_tabuada = vezes3_tabuada + numeroTabuadaUsuario ; 
+        var vezes5_tabuada = vezes4_tabuada + numeroTabuadaUsuario ; 
+        var vezes6_tabuada = vezes5_tabuada + numeroTabuadaUsuario ; 
+        var vezes7_tabuada = vezes6_tabuada + numeroTabuadaUsuario ;
+        var vezes8_tabuada = vezes7_tabuada + numeroTabuadaUsuario ; 
+        var vezes9_tabuada = vezes8_tabuada + numeroTabuadaUsuario ; 
+
+        // Exibir
+        div_resultado_tabuada.innerHTML = `${numeroTabuadaUsuario} x 1 = ${numeroTabuadaUsuario}<br>
+        ${numeroTabuadaUsuario} x 2 = ${vezes2_tabuada}<br>
+        ${numeroTabuadaUsuario} x 3 = ${vezes3_tabuada}<br>
+        ${numeroTabuadaUsuario} x 4 = ${vezes4_tabuada}<br>
+        ${numeroTabuadaUsuario} x 5 = ${vezes5_tabuada}<br>
+        ${numeroTabuadaUsuario} x 6 = ${vezes6_tabuada}<br>
+        ${numeroTabuadaUsuario} x 7 = ${vezes7_tabuada}<br>
+        ${numeroTabuadaUsuario} x 8 = ${vezes8_tabuada}<br>
+        ${numeroTabuadaUsuario} x 9 = ${vezes9_tabuada}` 
+
+
+    }
+</script>

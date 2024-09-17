@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6</title>
+</head>
+<body>
+    <h1> Carrara Drivers </h1>
+
+    <!-- Nome passageiro -->
+    <h4>Informe seu nome: </h4>
+    <input id="input_nome_passenger">
+
+    <!-- Distância viagem -->
+    <h4>Informe a distância entre o local de embarque 
+    até o local de desembarque: </h4>
+    <input id="input_distancia_viagem">
+
+    <!-- Bandeira -->
+    <h4>Informe a bandeira da corrida: </h4>
+    <input id="input_bandeira_viagem" type="number">
+
+    <!-- Informe o horário da corrida -->
+    <h4>Informe o horário da corrida: </h4>
+    <input id="input_horario_viagem" type="time">
+
+    <!-- Calcular a corrida -->
+    <button onclick="ExibirCalculoCorrida()">Calcular corrida</button>
+
+    <div id="div_resultado_corrida"></div>
+</body>
+</html>
+
+<!-- Funcionamento -->
+<script>
+    function ExibirCalculoCorrida() {
+        // variáveis
+        const nomeUser = input_nome_passenger.value
+        var distanciaViagem = Number(input_distancia_viagem.value)
+        var bandeiraViagem = Number(input_bandeira_viagem.value)
+        var horarioCorrida = Number(input_horario_viagem.value)
+
+        // calculos
+        var baseViagem = distanciaViagem * 1.25 ; 
+        var 
+
+        // Bandeira 1 
+        if(bandeiraViagem == 1) {
+            if(horarioCorrida <= 6) {
+                var acrescimoViagem = baseViagem * 1.05 ; 
+            }
+            if(horarioCorrida == 7) {
+                if(horarioCorrida <= 12){
+                var valorViagem = baseViagem * 1.10 ; 
+                }
+            }
+            if(horarioCorrida == 13) {
+                if(horarioCorrida <= 23) {
+                var valorViagem = baseViagem * 1.15 ; 
+                }
+            }
+        }
+        
+        // Bandeira 2 
+        if(bandeiraViagem == 2){
+            if(horarioCorrida <= 6) {
+            var valorViagem = baseViagem * 1.10 ; 
+            }
+            if(horarioCorrida == 7) {
+                if(horarioCorrida <= 12){
+                var valorViagem = baseViagem * 1.20 ; 
+                }
+            }
+            if(horarioCorrida == 13) {
+                if(horarioCorrida <= 23) {
+                var valorViagem = baseViagem * 1.30 ; 
+                }
+            }
+        }
+
+        // Bandeira 3 
+        if(bandeiraViagem == 3) {
+            if(horarioCorrida <= 6) {
+            var valorViagem = baseViagem * 1.15 ; 
+            }
+            if(horarioCorrida == 7) {
+                if(horarioCorrida <= 12) {
+                var valorViagem = baseViagem * 1.30 ; 
+                }
+            }
+            if(horarioCorrida == 13) {
+                if(horarioCorrida <= 23) {
+                var valorViagem = baseViagem * 1.45 ; 
+                }
+            }
+        }
+        div_resultado_corrida.innerHTML=`Olá ${nomeUser}! 
+                Sua corrida está na bandeira ${bandeiraViagem}, 
+                percorrerá ${distanciaViagem}km e o total da corrida 
+                será de ${valorViagem}`;
+
+    }
+</script>

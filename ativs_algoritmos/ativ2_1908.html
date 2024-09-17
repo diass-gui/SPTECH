@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    <!-- Entrada/Solicitação de dados -->
+     Informe a quantidade de votos do candidato A: 
+     <input id="input_votos_candidatoA"><br>
+     Informe a quantidade de votos do candidato B: 
+     <input id="input_votos_candidatoB"><br>
+     Informe a quantidade de votos brancos: 
+     <input id="input_votos_brancos"> <br>
+     Informe a quantidade de votos nulos: 
+     <input id="input_votos_nulos"> <br>
+    <button onclick="exibircalculosEleiçao()">Resultado da eleição</button>
+    <div id="div_resultados_eleicao"> </div>
+
+</body>
+</html>
+
+<!-- Funcionamento -->
+<script>
+    function exibircalculosEleiçao() {
+        // variáveis
+        var CandidatoAvotos = Number(
+            input_votos_candidatoA.value
+        );
+        var CandidatoBvotos = Number(
+            input_votos_candidatoB
+        );
+        var Brancosvotos = Number(
+            input_votos_brancos.value
+        ) ; 
+        var Nulosvotos = Number(
+            input_votos_nulos.value
+        ) ; 
+
+        // calculos
+        var votos_invalidos = Brancosvotos + Nulosvotos ;
+        var total_votos = CandidatoAvotos + CandidatoBvotos + Brancosvotos + Nulosvotos 
+
+        var porcentagem_votosA = total_votos * CandidatoAvotos / 100 ; 
+        var porcentagem_votosB = total_votos * CandidatoBvotos / 100 ; 
+        var porcentagem_invalido = votos_invalidos / 100 ; 
+
+        // exibir
+        div_resultados_eleicao.innerHTML = `Total de votos: ${total_votos}
+        Candidato A: ${porcentagem_votosA} (${CandidatoAvotos}), 
+        Candidato B: ${porcentagem_votosB} (${CandidatoBvotos}), 
+        Inválidos: ${porcentagem_invalido} (${votos_invalidos}). ` ;
+
+
+
+    }
+</script>
