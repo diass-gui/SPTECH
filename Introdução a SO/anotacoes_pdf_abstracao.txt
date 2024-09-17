@@ -1,0 +1,53 @@
+anotações pdf abstração de recursos 
+
+A abstração de recursos em um SO refere-se ao processo pelo qual o SO oculta
+detalhes de implementação dos recursos de hardware do computador, como
+processadores, memória, dispositivos de entrada e saída, de modo que os programas
+possam interagir com esses recursos de maneira simplificada e padronizada.
+
+A abstração de recursos garante que o acesso aos dispositivos do hardware por
+meio do SO, se faça de forma independente desse hardware, derivando interfaces
+homogêneas para dispositivos com tecnologias diferentes e diversas.
+
+HAL - Hardware abstraction layer
+
+É a camada de abstração de hardware
+
+• Fica entre o hardware físico de um computador e o software.
+• A sua função é ocultar diferenças em hardware e, consequentemente,
+disponibilizar uma plataforma consistente para rodar aplicações.
+• Este arquivo é o mais susceptível a ataques de vírus.
+• A HAL foi implementada em sistemas mais modernos, desde o Windows NT e
+seus sucessores.
+
+Revisão das respostas do quiz: 
+
+1 - Parcialmente correta: abstrair tá certo,
+lógico está errado, o correto é físicos, 
+usuários tá certo. 
+
+2 - Correta. 
+
+3 - Qual é um exemplo de abstração de recursos em um sistema operacional?
+Incorreta. A resposta correta era: 
+Um sistema operacional compartilhando recursos entre vários programas. 
+
+4 - Correta. 
+
+5 - Qual dos seguintes elementos não é considerado um recurso em um sistema computacional,
+conforme o texto de referência?
+Incorreta. A resposta correta era: 
+Nenhuma das anteriores. 
+
+6 - Correta. 
+
+7 - Correta. 
+
+8 - Correta. 
+
+9 - Correta. 
+
+10 - A abstração de recursos influencia o acesso aos dispositivos de hardware por meio do SO, 
+assim torna o acesso dependente do hardware específico.
+Incorreta. A resposta correta era: 
+Falso. 
