@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Atividade 11 - Lista de exercícios 9</h1><hr>
+
+    <h4>Informe quantas voltas um carro dará numa corrida: </h4>
+    <input id="input_voltas">
+
+    <button onclick="ExibirVoltas()">Iniciar corrida!</button>
+
+    <div id="div_voltas"></div>
+
+    <div id="div_finalizado"></div>
+</body>
+</html>
+
+<script>
+    function ExibirVoltas() {
+        div_voltas.innerHTML=""; 
+        const voltas = Number(input_voltas.value); 
+
+        for(var numero = 1; numero <= voltas; numero++) { 
+            div_voltas.innerHTML+=`${numero} <br>`; 
+            if(numero == 10) {
+            div_finalizado.innerHTML='Corrida finalizada!';
+        }
+        }
+    }
+</script>

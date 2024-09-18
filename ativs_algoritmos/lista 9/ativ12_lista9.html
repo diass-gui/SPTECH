@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Atividade 12 - Lista de exercícios 9</h1><hr>
+
+    <h4>Informe a tabuada que você quer ver: </h4>
+    <select id="select_tabuada">
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+    </select>
+
+    <h4>Informe até que número a tabuada será construída: </h4>
+    <input id="input_limiteTabuada">
+
+    <button onclick="ExibirTabuada()">Ver tabuada</button>
+
+    <div id="div_tabuada"></div>
+
+</body>
+</html>
+
+<script>
+    function ExibirTabuada() {
+        const tabuada = Number(select_tabuada.value); 
+        const limiteTabuada = Number(input_limiteTabuada.value); 
+
+        for(var numero = 1; numero <= limiteTabuada; numero += tabuada) {
+
+            var calculoTabuada = tabuada * numero; 
+            div_tabuada.innerHTML+=`${calculoTabuada} <br>`; 
+        }
+    }
+</script>
