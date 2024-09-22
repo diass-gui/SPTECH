@@ -6,6 +6,30 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Atividade 13 - Lista de exercícios 9</h1><hr>
+
+    <h4>Informe de quantos em quantos dias você faz musculação: </h4>
+    <input id="input_diaMusculacao"><br>
+
+    <button onclick="ExibirRotina()">Exibir Rotina Mensal</button>
+
+    <div id="div_rotina"></div>
+
 </body>
 </html>
+
+<script>
+    function ExibirRotina() {
+        const diaMusculação = Number(input_diaMusculacao.value); 
+        console.log(diaMusculação);
+        div_rotina.innerHTML="";    
+        
+        for(var numero = 1; numero <= 30; numero++) {
+            if(numero % diaMusculação == 1) {
+                div_rotina.innerHTML+=`Dia ${numero} - Musculação <br>`
+            } else {
+                div_rotina.innerHTML+=`Dia ${numero} - Comer, beber etc. <br>`
+            }
+            }
+        }
+</script>

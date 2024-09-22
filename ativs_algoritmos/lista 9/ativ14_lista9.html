@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Atividade 14 - Lista de exercícios 9</h1><hr>
+
+    <h4>Informe a sua idade: </h4>
+    <input id="input_idadeUsuario" onkeyup="ExibirIdade()"> <br>
+
+    <div id="div_idade"></div>
+
+</body>
+</html>
+
+<script>
+    function ExibirIdade() {
+
+        div_idade.innerHTML="";
+        
+        const idadeUsuario = Number(input_idadeUsuario.value); 
+
+        div_idade.innerHTML=`${idadeUsuario} anos <br>` ; 
+
+        for(var numero = 1; numero <= idadeUsuario; numero++) {
+            var fase;
+            if(idadeUsuario >= 0 && idadeUsuario <= 4) {
+                fase = 'Primeira Infância';
+                div_idade.innerHTML+=`${numero} anos ${fase} <br>`;
+            } if(idadeUsuario > 4 && idadeUsuario <= 6) {
+                fase = 'Pré-escolar'
+                div_idade.innerHTML+=`${numero} anos (${fase}) <br>`;
+            } if(idadeUsuario > 6 && idadeUsuario <= 10) {
+                fase = 'Segunda Infância'
+                div_idade.innerHTML+=`${numero} anos (${fase}) <br>`;
+            } if(idadeUsuario > 10 && idadeUsuario <= 18) {
+                fase = 'Adolescência'
+                div_idade.innerHTML+=`${numero} anos (${fase}) <br>`; 
+            } if(idadeUsuario > 18 && idadeUsuario <= 50) {
+                fase = 'Adulto'; 
+                div_idade.innerHTML+=`${numero} anos (${fase}) <br>`;
+            } if(idadeUsuario > 50 && idadeUsuario <= 100) {
+                fase = 'Melhor Idade'
+                div_idade.innerHTML+=`${numero} anos (${fase}) <br>`;
+            } if(idadeUsuario > 100) {
+                div_idade.innerHTML+=`${numero} anos (Matusalém) <br>`; 
+            }
+        } 
+    }
+</script>
