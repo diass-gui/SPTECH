@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Coloque o limite inferior da amostragem <br>
+    <input id="input_limiteInferior"> <br>
+    Coloque o limite superior da amostragem <br>
+    <input id="input_limiteSuperior"> <br>
+    Coloque um numero para testar a disibilidade <br>
+    <input id="input_disibilidade"> <br>
+    <button onclick="Contar()">
+        Contar
+    </button>
+    <div id="Resultado"></div>
+</body>
+
+</html>
+<script>
+    function Contar() {
+        const LimiteInferior = Number(input_limiteInferior.value)
+        const LimiteSuperior = Number(input_limiteSuperior.value)
+        const Disibilidade = Number(input_disibilidade.value)
+        if (LimiteInferior <= 1 || LimiteSuperior >= 100) {
+            alert(`Valores dos limites não atendem as exigencias`)
+        } else {
+            if (Disibilidade < 3 || Disibilidade > 10)
+                alert('Valor da Disibilidade tem que estar entre 3 e 10')
+            else {
+                 Resultado.innerHTML +=``
+                for (var numero =3; numero <= LimiteSuperior; numero += 1) {
+                    if(numero % Disibilidade == 0){
+                        Resultado.innerHTML+=`${numero} , `
+                        var numeroo = 0 + numero
+                    }}
+                    Resultado.innerHTML +=`<br>  QUANTIDADE TOTAL DE NÚMEROS EXIBIDOS: ${numero} <br>
+
+    SOMATÓRIO DOS NÚMEROS EXIBIDOS: 999 
+
+    MÉDIA DOS NÚMEROS EXIBIDOS: 99,99 
+
+    MAIOR NÚMERO EXIBIDO: 99 
+
+    MENOR NÚMERO EXIBIDO: 99 `
+
+                
+            }
+        }
+    }
+</script>

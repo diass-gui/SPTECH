@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Atividade 16 - Lista de exercícios 9</h1><hr>
+
+    <h4>Informe quantas pessoas irão entrar no carro:</h4>
+    <input id="input_caronas">
+
+    <button onclick="ExibirCarona()"> #PartiuCarona </button>
+
+    <div id="div_carona"></div>
+
+</body>
+</html>
+
+<script>
+    function ExibirCarona() {
+        const qtdCarona = Number(input_caronas.value);
+        div_carona.innerHTML="";
+
+        for(var numero = 1; numero <= qtdCarona; numero++) {
+            if(numero == 1) {
+                div_carona.innerHTML+=`Entrou o motorista <br>`;
+            } else if(numero > 1 && numero <= 5) {
+            div_carona.innerHTML+=`Entrou o ${numero}° passageiro <br>`; 
+        } else if(numero > 5) {
+                div_carona.innerHTML+=`O ${numero}° passageiro terá que esperar! <br>`;
+            }
+        }
+    }
+</script>

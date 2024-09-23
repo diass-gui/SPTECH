@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<Center>
+    <body>
+        Coloque um numero que esteja entre 0 e 100 <br>
+        <input id="input_numero"> <br>
+        <button onclick="VerDivisores()">
+            Ver Divisores
+        </button> <br>
+        <div id="Resultado"></div>
+    </body>
+</Center>
+
+</html>
+<script>
+    function VerDivisores() {
+        const valor = Number(input_numero.value)
+        if (valor < 0 || valor > 100) {
+            alert(` O valor inserido tem que estar entre 0 e 100`)
+        } else {
+            var DivisorNumero = 0
+            Resultado.innerHTML = ``
+            Resultado.innerHTML += `Divisores de ${valor} <br>`
+            for (var numero = 1; numero <= 100; numero += 1) {
+                if (valor % numero == 0) {
+                    Resultado.innerHTML += `${numero} <br>`
+                     DivisorNumero += 1
+                    
+                } }if (DivisorNumero == 2){
+                    Resultado.innerHTML += `${valor} é um numero primo` 
+                } else{
+                    Resultado.innerHTML += `${valor} não é um numero primo` 
+                }
+
+          
+        }
+    }
+</script>

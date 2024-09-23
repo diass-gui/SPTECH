@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Calculando seu dinheiro no banco</h1>
+    </center>
+    Coloque quantos depositos você fez no banco <br>
+    <input id="input_qtd_depositos"> <br>
+    Coloque a quantidade de dinheiro que você faz por debosito <br>
+    <input id="input_qtd_dinheiro"> <br>
+    <button onclick="AcompanharGrana()">
+        Acompanhar Grana
+    </button>
+    <div id="Resultado"></div>
+</body>
+
+</html>
+<script>
+    function AcompanharGrana() {
+        const depositos = Number(input_qtd_depositos.value)
+        const dinheiro = Number(input_qtd_dinheiro.value)
+          Resultado.innerHTML +=``
+        for (var numero = 1; numero <= depositos; numero += 1) {
+            var dinheiroo= dinheiro * numero
+            Resultado.innerHTML +=`${numero}º Mês: R${dinheiroo} <br> `
+        }
+    }
+</script>

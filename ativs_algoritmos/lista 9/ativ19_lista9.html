@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Coloque a quantidade de xiaras de café você ja tomou na vida <br>
+    <input id="input_qtd_xicaras"><br>
+    <button onclick="VerQuantidade()">
+        Ver quantidade
+    </button>
+    <div id="Resultado"></div>
+</body>
+
+</html>
+<script>
+    function VerQuantidade() {
+        const Xicaras = Number(input_qtd_xicaras.value)
+          Resultado.innerHTML+=``
+
+        for (var numero = 1; numero <= Xicaras; numero += 1) {
+            var café = Xicaras * 2
+
+            Resultado.innerHTML += `Você tomou ${numero} xicaras de café <br>`
+           
+        }  Resultado.innerHTML += `Você ultilizou ${numero} colheres de leite em pó e ${café} colheres de café em pó`
+    }
+</script>

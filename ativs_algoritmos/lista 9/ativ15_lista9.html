@@ -13,7 +13,7 @@
 
     <button onclick="ExibirElefante()">Atazanar a médium</button>
 
-    <div id="div-elefantes"></div>
+    <div id="div_elefantes"></div>
 
 </body>
 </html>
@@ -23,8 +23,14 @@
         const qtdElefante = Number(input_elefantes.value) ; 
 
         for(var numero = 1; numero <= qtdElefante; numero++) {
-            const elefante = 'incomodam'; 
-            
+           div_elefantes.innerHTML+=`1 elefante incomoda muita gente! <br>`;
+           div_elefantes.innerHTML+=`${numero} elefantes `;
+           
+           for(var num2 = 0; num2 < numero; num2++) {
+            div_elefantes.innerHTML+=`incomodam`; 
+            div_elefantes.innerHTML+=` `;
+           }
+        div_elefantes.innerHTML+=`muito mais <br> <br>`;
         }
     }
 </script>

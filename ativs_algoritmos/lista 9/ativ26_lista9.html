@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Numeros</h1>
+
+        Informe um numero entre 10 e 500: <br>
+        <input id="input_number"> <br>
+
+        <button onclick="SomarPares()">Somar Pares</button>
+
+        <div id="Resultado"></div>
+    </center>
+</body>
+
+</html>
+<script>
+    function SomarPares() {
+        const numeroUsuario = Number(input_number.value)
+        const numerosPares = 0
+        const qtdVezesExibida = 0
+
+        Resultado.innerHTML = ``
+
+        if (numeroUsuario <= 10 || numeroUsuario >= 500) {
+            alert("ERRO: O NUMERO NÃO ATENDE OS REQUISITOS")
+        } else {
+            var Soma = 0
+            for ( var numero = 1;
+                numero <= numeroUsuario;
+                numero += 1)
+                if (numero % 2 == 0) {
+                    Resultado.innerHTML+=`${numero} <br>`
+                    Soma+= numero 
+                } Resultado.innerHTML+=`Soma dos pares: ${Soma}`
+
+        }
+
+    }
+</script>
