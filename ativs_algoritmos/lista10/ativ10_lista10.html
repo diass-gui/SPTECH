@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 10</title>
+</head>
+<body>
+    <center>
+        <h1>Vamos ver se você acerta?</h1>
+    </center>
+    
+    <h4>Informe um número qualquer: </h4>
+    <input id="input_tentativa"><br>
+
+    <button onclick="AcertoseErros()">Chutar!</button>
+
+    <div id="Numero10"></div>
+
+</body>
+</html>
+
+<script>
+    function AcertoseErros() {
+
+    Numero10.innerHTML=""; 
+
+    const numeroUsuario = Number(input_tentativa.value);
+    var NumRANDOM = parseInt(Math.random() * 10 + 1); 
+    console.log(NumRANDOM);
+
+    if(NumRANDOM == numeroUsuario) {
+        Numero10.innerHTML=`Acertou!`;
+    } else {
+        Numero10.innerHTML=`Chapou!`;
+    }
+}
+</script>

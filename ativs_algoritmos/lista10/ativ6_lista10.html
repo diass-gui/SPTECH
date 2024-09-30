@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6</title>
+</head>
+<body>
+    
+    <div id="Numero6"></div>
+
+</body>
+</html>
+
+<script>
+    Numero6.innerHTML="";
+
+    for(var numero = 1; numero <= 10; numero++) {
+        var numerorandom = Math.random();
+
+        if(numerorandom > 0.5) {
+            Numero6.innerHTML+=`O número ${numerorandom} é maior que 0.5. <br>`
+        } else if(numerorandom < 0.5) {
+            Numero6.innerHTML+=`O número ${numerorandom} é menor que 0.5. <br>`
+        }
+    }
+</script>

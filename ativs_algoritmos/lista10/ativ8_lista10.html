@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 8</title>
+</head>
+<body>
+    
+    <div id="Numero8"></div>
+
+</body>
+</html>
+
+<script>
+    
+    Numero8.innerHTML="";
+
+    for(var numero = 1; numero <= 10; numero++) {
+        var NumeroRANDOM = Math.random() * 100 -50;
+        if(NumeroRANDOM < 0) {
+            Numero8.innerHTML+=`O número ${NumeroRANDOM} é negativo. <br>`;
+        } else if(NumeroRANDOM == 0 ) {
+            Numero8.innerHTML+=`O número ${NumeroRANDOM} é zero. <br>`;
+        } else if(NumeroRANDOM <= 50) {
+            Numero8.innerHTML+=`O número ${NumeroRANDOM} é positivo. <br>`;
+        }
+    }
+</script>

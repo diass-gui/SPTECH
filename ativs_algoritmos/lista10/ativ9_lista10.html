@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9</title>
+</head>
+<body>
+    
+    <div id="Numero9"></div>
+
+</body>
+</html>
+
+<script>
+
+    Numero9.innerHTML=""; 
+
+    for(var numero = 1; numero <= 10; numero++) {
+        var NumAleatorio = parseInt(Math.random() * 100 + 1);
+        if(NumAleatorio % 2 == 0) {
+            Numero9.innerHTML+=`${NumAleatorio} <br>`;
+        }
+    }
+
+</script>

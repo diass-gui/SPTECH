@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 12</title>
+</head>
+<body>
+    
+    <div id="Numero12"></div>
+
+</body>
+</html>
+
+<script>
+
+    Numero12.innerHTML=""; 
+    var soma = 0; 
+
+    for(var numero = 1; numero <= 10; numero++) {
+        var NumDado1 = parseInt(Math.random() * 6 + 1); 
+        var NumDados2 = parseInt(Math.random() * 6 + 1); 
+        
+        Numero12.innerHTML+=`${numero}° Lançamento: <br>
+        dado 1: ${NumDado1}<br>
+        dado 2: ${NumDados2}<br>`;
+        soma = NumDado1 + NumDados2;
+        
+        if(soma % 2 == 0) {
+            Numero12.innerHTML+=`A soma dos dados é igual a: <strong>${soma}</strong>. <br>
+            É um número <strong>par</strong>.<br>`
+        } else {
+            Numero12.innerHTML+=`A soma dos dados é igual a: <strong>${soma}</strong>. <br>
+            É um número <strong>ímpar</strong>.<br>`
+        }
+    }
+
+</script>

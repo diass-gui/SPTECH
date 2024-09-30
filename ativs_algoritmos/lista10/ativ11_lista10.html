@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 11</title>
+</head>
+<body>
+
+    <div id="Numero11"></div>
+    <div id="numero11_2"></div>
+
+</body>
+</html>
+
+<script>
+
+    Numero11.innerHTML=""; 
+
+    var soma = 0
+    
+    for(var numero = 1; numero <= 20; numero++) {
+        var numaleatorio = parseInt(Math.random() * 50 + 1);
+        
+        Numero11.innerHTML+=`${numaleatorio} <br>`; 
+
+        if(numaleatorio % 5 == 0) {
+            soma += numaleatorio;
+        } 
+    }
+            Numero11.innerHTML+=`O total da soma dos múltiplos de 5 é: <strong>${soma}</strong>`
+</script>
